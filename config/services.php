@@ -35,4 +35,16 @@ return [
         ],
     ],
 
+    'tmdb' => [
+        'key' => env('TMDB_API_KEY', (function (): string {
+            $path = base_path('tmdb-api.txt');
+            if (! is_file($path)) {
+                return '';
+            }
+
+            return trim((string) file_get_contents($path));
+        })()),
+        'base_url' => env('TMDB_BASE_URL', 'https://api.themoviedb.org/3'),
+    ],
+
 ];
