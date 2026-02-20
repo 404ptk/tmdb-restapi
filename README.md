@@ -1,5 +1,9 @@
 ## TMDB REST API
 
+Laravel REST API with multilingual support for movies and TV series data from TMDB, featuring a Livewire-powered dashboard and Docker deployment.
+
+![Homepage with movie list](images/tmdb-homepage.png)
+
 ### API Endpoints
 
 All endpoints accept the `Accept-Language` header (`en`, `pl`, `de`) and support pagination (for movies/series) via `?page=` and `?per_page=`.
@@ -93,6 +97,8 @@ All endpoints accept the `Accept-Language` header (`en`, `pl`, `de`) and support
 
 ### Running the project
 
+#### Option 1: Local development
+
 1. Install dependencies:
 	 ```powershell
 	 composer install
@@ -108,6 +114,33 @@ All endpoints accept the `Accept-Language` header (`en`, `pl`, `de`) and support
 	 php artisan serve
 	 ```
 4. Visit [http://127.0.0.1:8000](http://127.0.0.1:8000)
+
+#### Option 2: Docker
+
+1. Build and start containers:
+	 ```powershell
+	 docker compose up --build
+	 ```
+2. Visit [http://localhost:8000](http://localhost:8000)
+
+![Docker deployment](images/tmdb-restapi-docker.png)
+
+### Features
+
+- **REST API** with multilingual support (English, Polish, German)
+- **Livewire-powered dashboard** with paginated movie list
+- **Language switcher** on homepage for easy locale switching
+- **Feature tests** covering API endpoints and Livewire components
+- **Docker support** for easy deployment and development
+
+### Tests
+
+Run the test suite:
+```powershell
+php artisan test
+```
+
+![Test results](images/tmdb-restapi-tests.png)
 
 ---
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
