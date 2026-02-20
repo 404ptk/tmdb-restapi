@@ -23,17 +23,17 @@ All endpoints accept the `Accept-Language` header (`en`, `pl`, `de`) and support
 {
 	"current_page": 1,
 	"data": [
-		{
-			"id": 1,
-			"tmdb_id": 123,
-			"title": "Tytuł po polsku",
-			"overview": "Opis po polsku",
-			"release_date": "2020-01-01",
-			"poster_path": "/path.jpg",
-			"popularity": 123.45,
-			"vote_average": 7.8,
-			"vote_count": 100
-		},
+			{
+					"id": 1,
+					"tmdb_id": 1236153,
+					"title": "90 minut do wolności",
+					"overview": "W świecie bliskiej przyszłości wymiar sprawiedliwości przechodzi rewolucję. Mercy - sąd oparty na zaawansowanej sztucznej inteligencji - ma dostęp do wszystkich kamer, telefonów i baz danych. Jego werdyk-ty są szybkie, niepodważalne i... ostateczne.  Gdy detektyw John Kross zostaje oskarżony o zamordowa-nie żony, trafia przed trybunał, który sam kiedyś popierał. Przed sędzią Al ma zaledwie 90 minut, by udowodnić swoją niewinność. Jeśli mu się nie uda, zostanie stracony.  W Mercy obowiązuje zasada: to oskarżony musi udowodnić, że jest niewinny. W świecie, gdzie tradycyjne sądy zawodzą, ten system obiecuje koniec bezkarności. Ale w rękach niewłaściwych ludzi może stać się narzędziem doskonałej niesprawiedliwości.  Pełen napięcia thriller, który trzyma za gardło od pierwszej do ostatniej minuty.",
+					"release_date": "2026-01-20T00:00:00.000000Z",
+					"poster_path": "/pyok1kZJCfyuFapYXzHcy7BLlQa.jpg",
+					"popularity": 516.1282,
+					"vote_average": 6.7,
+					"vote_count": 251
+			},
 		...
 	],
 	...
@@ -54,17 +54,17 @@ All endpoints accept the `Accept-Language` header (`en`, `pl`, `de`) and support
 {
 	"current_page": 1,
 	"data": [
-		{
-			"id": 1,
-			"tmdb_id": 456,
-			"title": "Serientitel auf Deutsch",
-			"overview": "Beschreibung auf Deutsch",
-			"first_air_date": "2021-01-01",
-			"poster_path": "/path.jpg",
-			"popularity": 99.9,
-			"vote_average": 8.1,
-			"vote_count": 50
-		},
+			{
+					"id": 1,
+					"tmdb_id": 224372,
+					"title": "A Knight of the Seven Kingdoms",
+					"overview": "Ein Jahrhundert vor den Ereignissen von „Game of Thrones“ durchstreifen zwei unwahrscheinliche Helden durch Westeros, ein junger, naiver, aber mutiger Ritter, Ser Duncan der Große, und sein kleiner Knappe Ei. Die Handlung spielt in einer Zeit, in der die Targaryen immer noch auf dem Eisernen Thron sitzen und die Erinnerung an die letzten lebenden Drachen noch nicht verblasst ist. Ein großes Schicksal, machtvolle Gegner und gefährliche Erlebnisse erwarten diese unwahrscheinlichen und unvergleichlichen Freunde.",
+					"first_air_date": "2026-01-18T00:00:00.000000Z",
+					"poster_path": "/k8yARbD9iYn2nRX2HvsopfKDN2r.jpg",
+					"popularity": 352.9328,
+					"vote_average": 8.533,
+					"vote_count": 330
+			},
 		...
 	],
 	...
@@ -79,10 +79,22 @@ All endpoints accept the `Accept-Language` header (`en`, `pl`, `de`) and support
 
 **Response:**
 ```json
-[
-	{ "id": 1, "tmdb_id": 12, "name": "Action" },
+{
+	"current_page": 1,
+	"data": [
+			{
+					"id": 2,
+					"tmdb_id": 12,
+					"name": "Abenteuer"
+			},
+			{
+					"id": 1,
+					"tmdb_id": 28,
+					"name": "Action"
+			},
+		...
+	],
 	...
-]
 ```
 
 ### API Examples
