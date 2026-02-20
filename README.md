@@ -85,6 +85,20 @@ All endpoints accept the `Accept-Language` header (`en`, `pl`, `de`) and support
 ]
 ```
 
+### API Examples
+
+**Example 1: Get movies with Polish language**
+
+![Movies with Polish language](images/tmdb-postman.png)
+
+**Example 2: Get movies with pagination (page 2, 5 per page)**
+
+![Movies pagination](images/tmdb-postman2.png)
+
+**Example 3: Get series with German language with pagination (page 1, 10 per page)**
+
+![Series with German language](images/tmdb-postman3.png)
+
 ### Importing data from TMDB
 
 1. Place your TMDB API key in `tmdb-api.txt` (project root).
