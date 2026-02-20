@@ -80,18 +80,23 @@ All endpoints accept the `Accept-Language` header (`en`, `pl`, `de`) and support
 **Response:**
 ```json
 {
-	"current_page": 1,
-	"data": [
-			{
-					"id": 2,
-					"tmdb_id": 12,
-					"name": "Abenteuer"
-			},
-			{
-					"id": 1,
-					"tmdb_id": 28,
-					"name": "Action"
-			},
+    "current_page": 1,
+    "data": [
+        {
+            "id": 1,
+            "tmdb_id": 28,
+            "name": "Action"
+        },
+        {
+            "id": 20,
+            "tmdb_id": 10759,
+            "name": "Action & Adventure"
+        },
+        {
+            "id": 2,
+            "tmdb_id": 12,
+            "name": "Adventure"
+        },
 		...
 	],
 	...
