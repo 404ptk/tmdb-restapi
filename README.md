@@ -125,14 +125,6 @@ All endpoints accept the `Accept-Language` header (`en`, `pl`, `de`) and support
 
 ![Docker deployment](images/tmdb-restapi-docker.png)
 
-### Features
-
-- **REST API** with multilingual support (English, Polish, German)
-- **Livewire-powered dashboard** with paginated movie list
-- **Language switcher** on homepage for easy locale switching
-- **Feature tests** covering API endpoints and Livewire components
-- **Docker support** for easy deployment and development
-
 ### Tests
 
 Run the test suite:
