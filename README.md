@@ -172,6 +172,37 @@ php artisan test
 ```
 
 ![Test results](images/tmdb-restapi-tests.png)
+### Tech Stack
+
+**Backend:**
+- PHP 8.5
+- Laravel 12.52
+
+**Frontend:**
+- Livewire 4.1 - Interactive components for real-time UIs
+- Vite 7.0 - Frontend build tool
+- Custom CSS - Styled components
+
+**Database:**
+- SQLite - Local development database
+
+**Testing:**
+- PHPUnit 11.5 - PHP testing framework
+- Feature Tests - Integration tests for API and Livewire components
+- Mockery 1.6 - Mocking library
+
+**Queue & Background Jobs:**
+- Laravel Queue System - Database-driven task processing
+- ImportTmdbData Job - TMDB data import
+
+**Deployment:**
+- Docker - Containerization
+- Docker Compose - Container orchestration
+
+**Development Tools:**
+- Laravel Pint 1.27 - Code style fixer
+- Laravel Pail 1.2 - Log viewer
+- Axios 1.11 - HTTP client
 
 ---
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
