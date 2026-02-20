@@ -113,13 +113,21 @@ All endpoints accept the `Accept-Language` header (`en`, `pl`, `de`) and support
 
 ### Importing data from TMDB
 
+The application uses Laravel's queue system to import data from TMDB API in the background. This allows for efficient processing of large datasets without blocking the main application.
+
 1. Place your TMDB API key in `tmdb-api.txt` (project root).
-2. Run import job:
-	 ```powershell
-	 php artisan tmdb:import
-	 php artisan queue:work
-	 ```
-3. Data will be available via API and dashboard.
+2. Dispatch the import job:
+     ```powershell
+     php artisan tmdb:import
+     ```
+3. Start the queue worker to process the job:
+     ```powershell
+     php artisan queue:work --verbose
+     ```
+4. The job will fetch and store movies, series, and genres with multilingual support (EN, PL, DE).
+5. Data will be available via API and dashboard after import completes.
+
+![Queue job processing](images/tmdb-jobs.png)
 
 ### Running the project
 

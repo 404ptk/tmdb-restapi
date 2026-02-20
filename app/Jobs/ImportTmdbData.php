@@ -31,14 +31,24 @@ class ImportTmdbData implements ShouldQueue
             return;
         }
 
+        Log::info('Starting TMDB data import...');
+
+        Log::info('Fetching genres...');
         $genres = $this->fetchGenres($client);
         $this->storeGenres($genres);
+        Log::info('Imported ' . count($genres) . ' genres');
 
+        Log::info('Fetching movies...');
         $movies = $this->fetchMovies($client);
         $this->storeMovies($movies);
+        Log::info('Imported ' . count($movies) . ' movies');
 
+        Log::info('Fetching TV series...');
         $series = $this->fetchSeries($client);
         $this->storeSeries($series);
+        Log::info('Imported ' . count($series) . ' series');
+
+        Log::info('TMDB import completed successfully!');
     }
 
     private function fetchGenres(TmdbClient $client): array
@@ -193,31 +203,46 @@ class ImportTmdbData implements ShouldQueue
 
     private function storeGenres(array $genres): void
     {
+        $count = 0;
         foreach ($genres as $genre) {
             Genre::updateOrCreate(
                 ['tmdb_id' => $genre['tmdb_id']],
                 $genre
             );
+            $count++;
+            if ($count % 5 === 0) {
+                Log::info("  Stored {$count}/{" . count($genres) . "} genres");
+            }
         }
     }
 
     private function storeMovies(array $movies): void
     {
+        $count = 0;
         foreach ($movies as $movie) {
             Movie::updateOrCreate(
                 ['tmdb_id' => $movie['tmdb_id']],
                 $movie
             );
+            $count++;
+            if ($count % 10 === 0) {
+                Log::info("  Stored {$count}/{" . count($movies) . "} movies");
+            }
         }
     }
 
     private function storeSeries(array $series): void
     {
+        $count = 0;
         foreach ($series as $serie) {
             Serie::updateOrCreate(
                 ['tmdb_id' => $serie['tmdb_id']],
                 $serie
             );
+            $count++;
+            if ($count % 5 === 0) {
+                Log::info("  Stored {$count}/{" . count($series) . "} series");
+            }
         }
     }
 }
